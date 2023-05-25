@@ -9,13 +9,14 @@ import Producto from "../Producto/Producto"
 
 const ContenedorProductos = () => {
     const props = {
-        nombre: "Pelotas",
+        nombre: "Juego",
         precio: 3500
     };
   return (
     <div>
-        <Producto nombre="Colchonetas" precio={2500} />
-        <Producto nombre="Pesas" precio={4000} />
+        <Producto nombre="Juego1" precio={1800} />
+        <Producto nombre="Juego2" precio={2500} />
+        <Producto nombre="Juego3" precio={4000} />
         <Producto {...props} />
     </div>
   )

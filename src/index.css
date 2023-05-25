@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #ffffff; /* Agregamos esta línea para establecer el color del texto en blanco */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  background-color: #0e1e3a;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes transitionBackground {
+  0% { background-color: #0e1e3a; }
+  50% { background-color: #493ee9; }
+  100% { background-color: #0e1e3a; }
+}
+
+body {
+  animation: transitionBackground;
+  margin: 0;
+  padding: 0;
+}
+

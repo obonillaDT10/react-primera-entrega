@@ -10,3 +10,24 @@ li {
     margin: 1rem;
     cursor: pointer;
 }
+
+.navbar-header {
+    background-color: #0c0c0c; 
+    color: #ffffff; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif; 
+  }
+  
+  @keyframes transitionBackground {
+    0% { background-color: #0c0c0c; }
+    50% { background-color: #090344; }
+    100% { background-color: #090324; }
+  }
+  
+  .navbar-header {
+    animation: transitionBackground 3s infinite;
+  }
+  

@@ -3,16 +3,16 @@ import "./NavBar.css"
 
 const NavBar = () => {
   return (
-    <header>
-        <h1>Accesorios Deportivos</h1>
+    <header className="navbar-header">
+      <h1 style={{ marginLeft: "20px" }}>ORC GAMES ONLINE</h1>
 
-        <nav>
-            <ul>
-                <li>Pelotas</li>
-                <li>Colchonetas</li>
-                <li>Pesas</li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>Información</li>
+          <li>Tienda</li>
+          <li>Descargas</li>
+        </ul>
+      </nav>
 
 
         <CartWidget />
