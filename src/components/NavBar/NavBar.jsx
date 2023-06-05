@@ -1,16 +1,27 @@
 import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.css"
+import { Link, NavLink } from "react-router-dom"
 
 const NavBar = () => {
   return (
     <header className="navbar-header">
-      <h1 style={{ marginLeft: "20px" }}>ORC GAMES ONLINE</h1>
+      <Link to={"/"}>
+      <h1 style={{ marginLeft: "20px" }}>ORC GAMES</h1>      
+      </Link>
+      
 
       <nav>
         <ul>
-          <li>Información</li>
-          <li>Tienda</li>
-          <li>Descargas</li>
+          <li>
+            <NavLink to={"/"}> Home </NavLink>
+            </li>
+            <li>
+            <NavLink to={"/tienda"}> Tienda </NavLink>
+            </li>
+            <li>
+            <NavLink to={"/descargas"}> Descargas </NavLink>
+            </li>
+          
         </ul>
       </nav>
 
