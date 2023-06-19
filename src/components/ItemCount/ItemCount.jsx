@@ -1,17 +1,35 @@
-import React from 'react'
-//Importar una función de React que me ayuda a trabajar con el estado. En este caso seria el "useState"
+import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import './ItemCount.css'
 
-const ItemCount = () => {
-    //Los hooks se trabajan en esta parte superior del componente:
+const ItemCount = ({inicial, stock, funcionAgregar}) => {
+    const [contador, setContador] = useState(inicial);
     
+    const incrementar = () => {
+        if(contador < stock) {
+            setContador(contador + 1);
+        }
+    }
+
+    const decrementar = () => {
+        if(contador > inicial){
+            setContador(contador - 1);
+        }
+    }
+
   return (
-    <div>
-        <button> - </button>
-        <p>10</p>
-        <button> + </button>
-    </div>
+    <>
+        <div>
+            <button className='miBtn' onClick={ decrementar }> - </button>
+            <strong> {contador} </strong>
+            <button className='miBtn' onClick={ incrementar }> + </button>
+        </div>
+        { stock > 0 && <button className='miBtn' onClick={()=> funcionAgregar(contador)}> Agregar al Carrito </button>}
+        <Link to="/" className = "miBtn" > Seguir Comprando</Link>
+    </>
   )
 }
+
+//Incrementar y decrementar van sin parentesis porque si no se ejecutarían al momento de renderizar el componente. Y solo queremos que se ejecute cuando el visitante haga click en los botones. 
 
 export default ItemCount

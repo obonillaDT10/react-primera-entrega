@@ -1,17 +1,15 @@
 import './App.css';
 
-//import { Contexto } from './Context/context';
 
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-//import ItemCount from './components/ItemCount/ItemCount';
-//import ContenedorProductos from './components/ContenedorProductos/ContenedorProductos';
-import BotonCondicional from './components/BotonCondicional/BotonCondicional';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetail from './components/ItemDetail/ItemDetail';
+import Cart from './components/Cart/Cart';
+import { CarritoProvider } from './context/CarritoContext';
 
-// import Tienda from './Tienda/tienda';
-// import Descargas from './components/Descargas/descargas';
+
 
 
 
@@ -19,19 +17,19 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
+    <CarritoProvider>
       <NavBar />
-
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/categoria/:idCategoria" element={<ItemListContainer /> } />
         <Route path='/item/:idItem' element={<ItemDetailContainer />} />
+        <Route path='/item/:idItem' element={<ItemDetail />} />
+        {<Route path='/cart' element = {<Cart/>} />}
        
       </Routes>
-
-      {/* <ItemListContainer/> */}
-      {/* <ItemDetailContainer /> */}
-      <BotonCondicional />
+      </CarritoProvider>
     </BrowserRouter>
+   
   );
 }
 

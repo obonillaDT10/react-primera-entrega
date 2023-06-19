@@ -16,15 +16,28 @@
 //     })
 // }
 
-//Se crea una nueva función pero que esta vez retorne 1 solo producto:
-//Se usa "Export" para qeu peuda ser utilizada en toda la aplicación.
+// // Se crea una nueva función pero que esta vez retorne 1 solo producto:
+// // Se usa "Export" para qeu peuda ser utilizada en toda la aplicación.
 
 // export const getUnProducto = (id) => {
 //     return new Promise(resolve => {
 //         setTimeout( ()=> {
 //             const producto = productos.find(prod => prod.id === id);
 //             resolve(producto);
+//             console.log("Datos del producto:", producto); 
 //         }, 2000)
+        
+//     })
+
+
+// }
+
+// export const getProductosPorCategoria = (idCategoria) => {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             const productosCategoria = productos.filter(prod => prod.idCat === idCategoria);
+//             resolve(productosCategoria);
+//         }, 100)
 //     })
 // }
 
