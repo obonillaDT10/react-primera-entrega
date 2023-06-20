@@ -28,12 +28,9 @@
 //         <div>
 //             <ItemDetail {...producto} />
 //         </div>
-//     )
-// }
 
-// export default ItemDetailContainer
 
-//PRUEBAS
+
 import { useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
@@ -63,12 +60,7 @@ const ItemDetailContainer = () => {
     }, [idItem])
 
    
-    // useEffect(() => {
-    //     getUnProducto(idItem)
-    //         .then(res => setProducto(res))
-    // }, [idItem])
-
-    // console.log(producto)
+  
 
     return (
         <div>
